@@ -1,4 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 body {
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -8,7 +11,7 @@ body {
   width: 100%;
   margin: 0 auto;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 1fr 2fr 3fr;
   grid-template-areas:
     "header header header nav"
     "main1 main1 main1 main1"
@@ -17,25 +20,62 @@ body {
 }
 
 .header {
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   grid-area: header;
+  align-items: center;
+  line-height: 0%;
 }
 
 .headerh1 {
-  font-size: 1rem;
-  margin-left: 20%;
+  font-size: 1.5rem;
 }
 
 .headerp {
   font-size: 1rem;
-  margin-left: 20%;
+}
+
+.mNav {
+  grid-area: nav;
+  position: absolute;
+  margin-left: 75%;
 }
 
 .menu {
-  display: flex;
-  justify-content: flex-end;
-  grid-area: nav;
+  background-color: black;
+  opacity: 0.8;
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 4rem;
+  display: block;
+  border-bottom: 1px solid #eaeaeb;
+  margin: 0;
+}
+
+label {
+  margin: 1rem 3rem 0 1rem;
+  font-size: 3rem;
+  display: block;
+  cursor: pointer;
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked + .menu {
+  display: block;
+}
+
+input:checked ~ .menu {
+  transform: none;
 }
 
 .main1 {
@@ -46,12 +86,16 @@ body {
   height: auto;
 }
 
-.code-image {
+.wireframeImage {
   width: 90%;
   height: auto;
+  border: 2px solid #fff;
+  box-shadow: 10px 10px 5px #ccc;
+  border-radius: 25px;
 }
 
 .main2 {
+  margin-bottom: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,6 +103,31 @@ body {
   grid-area: main2;
 }
 
+.main2h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.fas.fa-paint-brush {
+  margin-left: 2%;
+}
+
 footer {
   grid-area: footer;
+  background-color: #efefef;
+}
+
+@media (min-width: 500px) {
+  .gContainer {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 2fr 3fr;
+    grid-template-areas:
+      "header header nav nav"
+      "main1 main1 main1 main1"
+      "main2 main2 main2 main2"
+      "footer footer footer footer";
+  }
 }
