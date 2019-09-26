@@ -10,13 +10,13 @@ body {
   display: grid;
   width: 100%;
   margin: 0 auto;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 2fr 3fr;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 15% 40% 40% 5%;
   grid-template-areas:
-    "header header header nav"
-    "main1 main1 main1 main1"
-    "main2 main2 main2 main2"
-    "footer footer footer footer";
+    "header header header header nav nav"
+    "main1 main1 main1 main1 main1 main1"
+    "main2 main2 main2 main2 main2 main2"
+    "footer footer footer footer footer footer";
 }
 
 .header {
@@ -25,15 +25,14 @@ body {
   flex-direction: column;
   grid-area: header;
   align-items: center;
-  line-height: 0%;
 }
 
 .headerh1 {
-  font-size: 1.5rem;
+  font-size: 18px;
 }
 
 .headerp {
-  font-size: 1rem;
+  font-size: 12px;
 }
 
 .mNav {
@@ -53,15 +52,15 @@ body {
 .menu a {
   text-decoration: none;
   color: #fff;
-  line-height: 4rem;
+  line-height: 60px;
   display: block;
   border-bottom: 1px solid #eaeaeb;
   margin: 0;
 }
 
 label {
-  margin: 1rem 3rem 0 1rem;
-  font-size: 3rem;
+  margin-top: 20%;
+  font-size: 42px;
   display: block;
   cursor: pointer;
 }
@@ -106,8 +105,9 @@ input:checked ~ .menu {
 .main2h2 {
   display: flex;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 18px;
 }
+
 .fas.fa-paint-brush {
   margin-left: 2%;
 }
@@ -117,17 +117,38 @@ footer {
   background-color: #efefef;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 800px) {
+  body {
+    background-color: aliceblue;
+  }
   .gContainer {
     display: grid;
     width: 100%;
     margin: 0 auto;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 2fr 3fr;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 15% 40% 40% 5%;
     grid-template-areas:
-      "header header nav nav"
-      "main1 main1 main1 main1"
-      "main2 main2 main2 main2"
-      "footer footer footer footer";
+      "header header header header nav nav"
+      "main1 main1 main1 main1 main1 main1"
+      "main2 main2 main2 main2 main2 main2"
+      "footer footer footer footer footer footer";
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .headerh1 {
+    display: flex;
+    font-size: 40px;
+  }
+
+  .headerp {
+  }
+
+  .mNav {
+    grid-area: nav;
+  }
+  .label {
   }
 }
