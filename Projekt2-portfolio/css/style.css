@@ -9,6 +9,7 @@ body {
 .gContainer {
   display: grid;
   width: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 15% 40% 40% 5%;
@@ -21,21 +22,25 @@ body {
 
 .header {
   margin-top: 5%;
+  margin-left: 10%;
   display: flex;
   flex-direction: column;
   grid-area: header;
-  align-items: center;
+  justify-content: center;
 }
 
 .headerh1 {
-  font-size: 18px;
+  font-size: 4vw;
 }
 
 .headerp {
-  font-size: 12px;
+  margin-top: -4%;
+  margin-left: 8%;
+  font-size: 2vw;
 }
 
 .mNav {
+  margin-top: 7%;
   grid-area: nav;
   position: absolute;
   margin-left: 75%;
@@ -45,7 +50,7 @@ body {
   background-color: black;
   opacity: 0.8;
   text-align: center;
-  width: 100%;
+  width: 150%;
   display: none;
 }
 
@@ -59,23 +64,24 @@ body {
 }
 
 label {
-  margin-top: 20%;
-  font-size: 42px;
   display: block;
+  display: flex;
+  font-size: 42px;
   cursor: pointer;
 }
 
 #toggle {
+  margin-top: 5%;
   display: none;
 }
 
 #toggle:checked + .menu {
   display: block;
 }
-
+/* 
 input:checked ~ .menu {
   transform: none;
-}
+} */
 
 .main1 {
   grid-area: main1;
@@ -93,6 +99,14 @@ input:checked ~ .menu {
   border-radius: 25px;
 }
 
+.codeImage {
+  display: none;
+}
+
+.web-designImage {
+  display: none;
+}
+
 .main2 {
   margin-bottom: 10%;
   display: flex;
@@ -103,9 +117,14 @@ input:checked ~ .menu {
 }
 
 .main2h2 {
+  margin-top: 20%;
   display: flex;
   justify-content: center;
-  font-size: 18px;
+  font-size: 4vw;
+}
+
+.main2p {
+  font-size: 3vw;
 }
 
 .fas.fa-paint-brush {
@@ -113,13 +132,18 @@ input:checked ~ .menu {
 }
 
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
   grid-area: footer;
   background-color: #efefef;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 550px) {
   body {
-    background-color: aliceblue;
   }
   .gContainer {
     display: grid;
@@ -139,16 +163,89 @@ footer {
   }
 
   .headerh1 {
-    display: flex;
-    font-size: 40px;
+    font-size: 3vmax;
   }
 
   .headerp {
+    font-size: 1.5vmax;
   }
 
   .mNav {
+    margin-top: 6%;
+    margin-left: 60%;
+    display: flex;
     grid-area: nav;
   }
-  .label {
+
+  .menu {
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+
+  .menu a {
+    padding: 0vw 2.5vw 1vw;
+    text-decoration: none;
+    color: #144354;
+    display: inline;
+    border-bottom: 2px solid #eaeaeb;
+    margin: 0;
+  }
+
+  label {
+    display: none;
+  }
+
+  #toggle {
+    display: none;
+  }
+
+  .main1 {
+    margin-top: 5%;
+    grid-area: main1;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .wireframeImage {
+    width: 34%;
+    height: auto;
+    border: 0px;
+    box-shadow: 0px 15px 7px #ccc;
+    border-radius: 0px;
+  }
+
+  .codeImage {
+    display: blocK;
+    width: 33%;
+    height: auto;
+    box-shadow: 0px 15px 7px #ccc;
+  }
+
+  .web-designImage {
+    display: block;
+    width: 33%;
+    height: auto;
+    box-shadow: 0px 15px 7px #ccc;
+  }
+
+  .main2 {
+    grid-area: main2;
+  }
+
+  .main2h2 {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5vmax;
+  }
+
+  .main2p {
+    font-size: 1.5vmax;
+  }
+
+  footer {
+    grid-area: footer;
   }
 }
