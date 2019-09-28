@@ -30,13 +30,13 @@ body {
 }
 
 .headerh1 {
-  font-size: 4vw;
+  font-size: 3vw;
 }
 
 .headerp {
   margin-top: -4%;
-  margin-left: 8%;
-  font-size: 2vw;
+  margin-left: 5%;
+  font-size: 1.7vw;
 }
 
 .mNav {
@@ -78,10 +78,6 @@ label {
 #toggle:checked + .menu {
   display: block;
 }
-/* 
-input:checked ~ .menu {
-  transform: none;
-} */
 
 .main1 {
   grid-area: main1;
@@ -117,7 +113,7 @@ input:checked ~ .menu {
 }
 
 .main2h2 {
-  margin-top: 20%;
+  margin-top: 15%;
   display: flex;
   justify-content: center;
   font-size: 4vw;
@@ -143,8 +139,6 @@ footer {
 }
 
 @media (min-width: 550px) {
-  body {
-  }
   .gContainer {
     display: grid;
     width: 100%;
@@ -163,11 +157,9 @@ footer {
   }
 
   .headerh1 {
-    font-size: 3vmax;
   }
 
   .headerp {
-    font-size: 1.5vmax;
   }
 
   .mNav {
@@ -238,11 +230,11 @@ footer {
     margin-top: 10%;
     display: flex;
     justify-content: center;
-    font-size: 2.5vmax;
+    font-size: 2vw;
   }
 
   .main2p {
-    font-size: 1.5vmax;
+    font-size: 1.8vw;
   }
 
   footer {
