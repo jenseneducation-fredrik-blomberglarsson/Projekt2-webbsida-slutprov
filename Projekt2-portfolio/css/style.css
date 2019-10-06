@@ -1,18 +1,27 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+.color-white {
+  color: rgb(245, 245, 245);
+}
+
+.box-shadow-color {
+  box-shadow: 10px 10px 5px #ccc;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
 
+/* Grid container */
 .gContainer {
   display: grid;
   width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
 }
 
+/* grid container klass för Index */
 .gIndex {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 15% 40% 40% 5%;
@@ -66,6 +75,7 @@ body {
   margin: 0;
 }
 
+/* Hamburgare meny */
 label {
   display: block;
   display: flex;
@@ -78,10 +88,12 @@ label {
   display: none;
 }
 
+/* checkbox tricket */
 #toggle:checked + .menu {
   display: block;
 }
 
+/* Main1 med bilder */
 .main1 {
   grid-area: main1;
   display: flex;
@@ -94,7 +106,6 @@ label {
   width: 90%;
   height: auto;
   border: 2px solid #fff;
-  box-shadow: 10px 10px 5px #ccc;
   border-radius: 25px;
 }
 
@@ -126,6 +137,7 @@ label {
   font-size: 3vw;
 }
 
+/* Paintbrush ikon */
 .fas.fa-paint-brush {
   margin-left: 2%;
 }
@@ -134,15 +146,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  bottom: 0;
-  width: 100%;
   grid-area: footer;
   background-color: #efefef;
 }
 
+/* grid-container klass för Kontakt */
 .gContact {
-  min-height: 120vh;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 15% 80% 5%;
   grid-template-areas:
@@ -151,21 +160,22 @@ footer {
     "footer footer footer footer footer footer";
 }
 
+/* Kontakt main */
 .cMain1 {
   background: url("/Projekt2-portfolio/images/bg.jpg") center;
   background-size: cover;
   padding: 40px 0;
   grid-area: cMain1;
-  color: rgb(245, 245, 245);
   font-weight: 700;
 }
 
+/* Kontakt h1 */
 .ch1 {
   text-align: center;
 }
 
+/* Github länk */
 .github {
-  color: rgb(245, 245, 245);
   display: flex;
   justify-content: center;
   text-decoration: none;
@@ -177,6 +187,7 @@ footer {
   text-decoration: none;
 }
 
+/* Kontaktformulär */
 .contact-form {
   max-width: 600px;
   margin: 40px auto;
@@ -186,7 +197,6 @@ footer {
 }
 
 .contact-form-text {
-  box-sizing: border-box;
   margin: 1%;
   border: 0;
   background: #111;
@@ -219,7 +229,7 @@ textarea.contact-form-text {
 }
 
 @media (min-width: 550px) {
-  .gContainer {
+  .gIndex {
     grid-template-areas:
       "header header header header nav nav"
       "main1 main1 main1 main1 main1 main1"
@@ -249,6 +259,7 @@ textarea.contact-form-text {
     margin: 0;
   }
 
+  /* Hamburgare meny */
   label {
     display: none;
   }
@@ -267,22 +278,19 @@ textarea.contact-form-text {
     width: 34%;
     height: auto;
     border: 0px;
-    box-shadow: 0px 15px 7px #ccc;
     border-radius: 0px;
   }
 
   .codeImage {
-    display: blocK;
+    display: block;
     width: 33%;
     height: auto;
-    box-shadow: 0px 15px 7px #ccc;
   }
 
   .web-designImage {
     display: block;
     width: 33%;
     height: auto;
-    box-shadow: 0px 15px 7px #ccc;
   }
 
   .main2h2 {
@@ -299,10 +307,13 @@ textarea.contact-form-text {
   .gContact {
     min-height: 150vh;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 25% 70% 5%;
+    grid-template-rows: 15% 80% 5%;
     grid-template-areas:
       "header header header header nav nav"
       "cMain1 cMain1 cMain1 cMain1 cMain1 cMain1"
       "footer footer footer footer footer footer";
+  }
+  .cMain1 {
+    margin-top: 5%;
   }
 }
