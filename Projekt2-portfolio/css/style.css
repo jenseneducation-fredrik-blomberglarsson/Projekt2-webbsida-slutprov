@@ -78,7 +78,6 @@ body {
 /* Hamburgare meny */
 label {
   display: block;
-  display: flex;
   font-size: 42px;
   cursor: pointer;
 }
@@ -242,7 +241,6 @@ textarea.contact-form-text {
   .nav {
     margin-top: 6%;
     margin-left: 60%;
-    display: flex;
   }
 
   .menu {
@@ -263,10 +261,6 @@ textarea.contact-form-text {
 
   /* Hamburgare meny */
   label {
-    display: none;
-  }
-
-  #toggle {
     display: none;
   }
 
@@ -306,15 +300,6 @@ textarea.contact-form-text {
     font-size: 1.8vw;
   }
 
-  .gContact {
-    min-height: 150vh;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 15% 80% 5%;
-    grid-template-areas:
-      "header header header header nav nav"
-      "cMain1 cMain1 cMain1 cMain1 cMain1 cMain1"
-      "footer footer footer footer footer footer";
-  }
   .cMain1 {
     margin-top: 5%;
   }
