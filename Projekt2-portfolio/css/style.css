@@ -230,14 +230,6 @@ textarea.contact-form-text {
 }
 
 @media (min-width: 550px) {
-  .gIndex {
-    grid-template-areas:
-      "header header header header nav nav"
-      "hero hero hero hero hero hero"
-      "main main main main main main"
-      "footer footer footer footer footer footer";
-  }
-
   .nav {
     margin-top: 6%;
     margin-left: 60%;
