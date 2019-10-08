@@ -264,7 +264,6 @@ textarea.contact-form-text {
 
   .wireframeImage {
     width: 34%;
-    height: auto;
     border: 0px;
     border-radius: 0px;
   }
@@ -272,13 +271,11 @@ textarea.contact-form-text {
   .codeImage {
     display: block;
     width: 33%;
-    height: auto;
   }
 
   .web-designImage {
     display: block;
     width: 33%;
-    height: auto;
   }
 
   .mainh2 {
