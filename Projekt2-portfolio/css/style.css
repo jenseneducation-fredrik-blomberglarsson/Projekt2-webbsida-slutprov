@@ -53,9 +53,9 @@ body {
 
 .nav {
   margin-top: 7%;
-  grid-area: nav;
   position: absolute;
   margin-left: 75%;
+  grid-area: nav;
 }
 
 .menu {
@@ -95,11 +95,11 @@ label {
 
 /* Hero med bilder */
 .hero {
-  grid-area: hero;
   display: flex;
   justify-content: center;
   max-width: 100%;
   height: auto;
+  grid-area: hero;
 }
 
 .wireframeImage {
@@ -146,8 +146,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-area: footer;
   background-color: #efefef;
+  grid-area: footer;
 }
 
 /* grid-container klass för Kontakt */
@@ -156,17 +156,17 @@ footer {
   grid-template-rows: 15% 80% 5%;
   grid-template-areas:
     "header header header header nav nav"
-    "cMain1 cMain1 cMain1 cMain1 cMain1 cMain1"
+    "cMain cMain cMain cMain cMain cMain"
     "footer footer footer footer footer footer";
 }
 
 /* Kontakt main */
-.cMain1 {
+.cMain {
   background: url("/Projekt2-portfolio/images/bg.jpg") center;
   background-size: cover;
   padding: 50px 0;
-  grid-area: cMain1;
   font-weight: 700;
+  grid-area: cMain;
 }
 
 /* Kontakt h1 */
@@ -259,7 +259,6 @@ textarea.contact-form-text {
   .hero {
     margin-top: 5%;
     max-width: 100%;
-    height: auto;
   }
 
   .wireframeImage {
@@ -289,7 +288,7 @@ textarea.contact-form-text {
     font-size: 1.8vw;
   }
 
-  .cMain1 {
+  .cMain {
     margin-top: 5%;
   }
 }
